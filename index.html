@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="LayoutCSS.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <nav id="intro" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="logo-wrapper d-flex justify-content-center align-items-center flex-grow-1">
+                <div id="intro-nbi-logo" class="nav-item">
+                    <img src="resources/NBIImages/nbi.png" alt="nbi" class="img-fluid">
+                </div>
+
+                <div id="center-logo" class="nav-item" style="visibility: hidden;">
+                    <img id="center-logo-img" src="resources/NBIImages/nbi.png" alt="nbi">
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div id="content-cover" class=""></div>
+
+    <!-- Page content -->
+    <div style="padding-top: 50px; height: calc(100vh);" class="w-100 d-flex">
+        <div class="w-100 flex-fill">
+            <!-- Main Content -->
+
+            <div class="text-center">
+
+                <h1>Play the long game, join NBI.</h1>
+                <h2>Oldest faction standing.</h2>
+                <!-- <img src="Resources/NBIImages/nbi.gif" alt="NBI"> -->
+                <br />
+                <!-- <iframe id="discordWidget" src="https://discord.com/widget?id=729001335814488184&theme=dark" width="350"
+                    height="500" allowtransparency="true" frameborder="0"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
+
+                <iframe style="
+                width: 302px;
+                height: 80px;
+                " src="nbiInvite.html" frameborder="0"></iframe>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+
+        const body = document.body;
+
+        const intro = document.getElementById('intro');
+        const center_logo = document.getElementById('center-logo');
+
+        const cover = document.getElementById('content-cover');
+        let firstDuration = 2000;
+
+
+        intro.addEventListener('animationstart', () => {
+            setTimeout(() => {
+                center_logo.style.visibility = "visible"
+                // center_logo.hidden = false;
+                center_logo.style.animation = 'slideToLeftFromRight 2s forwards';
+            }, firstDuration / 2); // start second animation halfway through first
+        });
+
+        intro.addEventListener('animationend', () => {
+            cover.style.visibility = 'hidden'
+            body.style.overflow = 'auto'; // or 'scroll'
+        });
+
+        intro.style.animation = "slideUpAndShrink 2s forwards";
+
+    </script>
+</body>
+
+</html>
