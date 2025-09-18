@@ -183,7 +183,7 @@ body::before {
     }
 
     100% {
-        transform: translateX(50vw) translateX(-35px);
+        /* transform: translateX(50vw) translateX(-35px); */
         opacity: 1;
     }
 }

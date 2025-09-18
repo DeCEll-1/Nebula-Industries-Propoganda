@@ -6,6 +6,41 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="LayoutCSS.css">
     <title>Document</title>
+    <style>
+        #masterDIV::after {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+
+            /* background: url("/Resources/SVG/LayoutBackground.svg") repeat; */
+            mix-blend-mode: darken;
+            pointer-events: none;
+
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        #masterDIV::before {
+            content: "";
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: #141719;
+
+            border-radius: inherit;
+            z-index: -2;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,16 +77,46 @@
                     height="500" allowtransparency="true" frameborder="0"
                     sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
 
-                <iframe style="
-                width: 302px;
+                <!-- <iframe style="
+                width: 302px; // "wahh you cant embed discord stuff in i frame cuz fuck you thats why"
                 height: 80px;
-                " src="nbiInvite.html" frameborder="0"></iframe>
+                " src="nbiInvite.html" frameborder="0"></iframe> -->
+                <div class="">
 
+                    <div style="
+                        position: relative;
+                        width: 300px;
+                        height: 70px;
+                        display: flex;
+                        border:solid 3px;
+                        border-left-width: 0px;
+                        border-color: #472C6D;
+                        border-radius: 12px;
+                        margin-left: auto;
+                        margin-right: auto;
 
-
+                    ">
+                        <div id="masterDIV" class="d-flex w-100" style="
+                            border-radius: 5px;
+                        ">
+                            <div class="h-100 p-1" style="
+                                width: 70px;
+                                background-color: #141719;
+                                outline: 3px solid #472C6D; 
+                                border-radius: 14px 45px 45px 14px;
+                            ">
+                                <img src="Resources/NBIImages/nbi.png" style="height: inherit;">
+                            </div>
+                            <div class="text-light p-0 m-auto me-3">
+                                <a class="btn btn-primary btn-dark float-end" href="https://discord.gg/j7pQ7cQT"
+                                    role="button">Join
+                                    NBI
+                                    Discord.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
         </div>
     </div>
 
